@@ -1,0 +1,56 @@
+[submodule "packages/claude-objects"]
+	path = packages/claude-objects
+	url = https://github.com/jadecli/claude-objects.git
+	branch = pre-main
+[submodule "packages/dotfiles"]
+	path = packages/dotfiles
+	url = https://github.com/jadecli/dotfiles.git
+	branch = pre-main
+[submodule "packages/jade-claude-settings"]
+	path = packages/jade-claude-settings
+	url = https://github.com/jadecli/jade-claude-settings.git
+	branch = pre-main
+[submodule "packages/jade-cli"]
+	path = packages/jade-cli
+	url = https://github.com/jadecli/jade-cli.git
+	branch = pre-main
+[submodule "packages/jade-dev-assist"]
+	path = packages/jade-dev-assist
+	url = https://github.com/jadecli/jade-dev-assist.git
+	branch = pre-main
+[submodule "packages/jade-docker"]
+	path = packages/jade-docker
+	url = https://github.com/jadecli/jade-docker.git
+	branch = pre-main
+[submodule "packages/jade-ecosystem-assist"]
+	path = packages/jade-ecosystem-assist
+	url = https://github.com/jadecli/jade-ecosystem-assist.git
+	branch = pre-main
+[submodule "packages/jade-ide"]
+	path = packages/jade-ide
+	url = https://github.com/jadecli/jade-ide.git
+	branch = pre-main
+[submodule "packages/jade-index"]
+	path = packages/jade-index
+	url = https://github.com/jadecli/jade-index.git
+	branch = pre-main
+[submodule "packages/jade-swarm"]
+	path = packages/jade-swarm
+	url = https://github.com/jadecli/jade-swarm.git
+	branch = pre-main
+[submodule "packages/jadecli-codespaces"]
+	path = packages/jadecli-codespaces
+	url = https://github.com/jadecli/jadecli-codespaces.git
+	branch = pre-main
+[submodule "packages/jadecli-infra"]
+	path = packages/jadecli-infra
+	url = https://github.com/jadecli/jadecli-infra.git
+	branch = pre-main
+[submodule "packages/jadecli-roadmap-and-architecture"]
+	path = packages/jadecli-roadmap-and-architecture
+	url = https://github.com/jadecli/jadecli-roadmap-and-architecture.git
+	branch = pre-main
+[submodule "packages/jadeflow-dev-scaffold"]
+	path = packages/jadeflow-dev-scaffold
+	url = https://github.com/jadecli/jadeflow-dev-scaffold.git
+	branch = pre-main
