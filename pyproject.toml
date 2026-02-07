@@ -1,0 +1,29 @@
+[project]
+name = "jade-monolith"
+version = "0.1.0"
+description = "jadecli ecosystem monorepo — agent teams integration tests"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+    "pyyaml>=6.0",
+    "requests>=2.31",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "schema: Agent definition schema validation",
+    "contract: Contract tests against Claude Code CLI",
+    "compat: Version compatibility checks",
+    "smoke: Quick smoke tests for agent team readiness",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "SIM"]
