@@ -1,7 +1,7 @@
-# Tasks — Checkpoint 2026-02-07T06:00Z
+# Tasks — Checkpoint 2026-02-07T07:10Z
 
-28 tasks completed. Zero open issues, zero open PRs across core ecosystem.
-All branches synced (pre-main = main). 14 submodules on latest main. 11 releases cut.
+36 tasks completed. 23 onboarding issues open (backlog for 24 remaining repos).
+All branches synced (pre-main = main). 14 submodules on latest main. 12 releases cut.
 
 ## Ecosystem Status
 
@@ -14,7 +14,7 @@ All branches synced (pre-main = main). 14 submodules on latest main. 11 releases
 | jade-dev-assist | [jadecli/jade-dev-assist](https://github.com/jadecli/jade-dev-assist) | Clean — released 1.2.0 |
 | jade-docker | [jadecli/jade-docker](https://github.com/jadecli/jade-docker) | Clean |
 | jade-ecosystem-assist | [jadecli/jade-ecosystem-assist](https://github.com/jadecli/jade-ecosystem-assist) | Clean — released 0.4.0 |
-| jade-ide | [jadecli/jade-ide](https://github.com/jadecli/jade-ide) | Clean |
+| jade-ide | [jadecli/jade-ide](https://github.com/jadecli/jade-ide) | Clean — released 0.2.0 |
 | jade-index | [jadecli/jade-index](https://github.com/jadecli/jade-index) | Clean — released 0.2.0 |
 | jade-swarm | [jadecli/jade-swarm](https://github.com/jadecli/jade-swarm) | Clean — released 4.3.0 |
 | jadecli-codespaces | [jadecli/jadecli-codespaces](https://github.com/jadecli/jadecli-codespaces) | Clean |
@@ -22,6 +22,19 @@ All branches synced (pre-main = main). 14 submodules on latest main. 11 releases
 | jadecli-roadmap | [jadecli/jadecli-roadmap-and-architecture](https://github.com/jadecli/jadecli-roadmap-and-architecture) | Clean — released 1.2.0 |
 | jadeflow-dev-scaffold | [jadecli/jadeflow-dev-scaffold](https://github.com/jadecli/jadeflow-dev-scaffold) | Clean |
 | jade-monolith | [jadecli/jade-monolith](https://github.com/jadecli/jade-monolith) | Clean |
+
+## Session 3 Tasks
+
+| Task ID | Title | Status | Resolution |
+|---------|-------|--------|------------|
+| monolith/agent-teams-config | Port Agent Teams config from jadeflow PR #31 | Done | PR#26 — 4 agents, tests, PR templates, 26 files |
+| monolith/repo-audit | Audit all 39 repos, create REGISTRY + CHECKLIST | Done | PR#2 — contributing-docs/, 23 issues (#3–#25) |
+| monolith/onboarding-issues | Create GitHub issues for 24 non-zero-debt repos | Done | Issues #3–#25 with batch/status/action labels |
+| monolith/jade-ide-release | Merge jade-ide release PR #8 (v0.2.0) | Done | Released 0.2.0, pre-main synced |
+| monolith/sync-pre-main-3 | Sync pre-main with main after merges | Done | pre-main = main at 349524c |
+| monolith/branch-cleanup-3 | Delete merged feature branches | Done | feat/agent-teams-config, research/repo-audit |
+| monolith/update-settings | Merge agent teams env/permissions into settings.json | Done | .claude/settings.json updated |
+| monolith/update-tasks-3 | Update TASKS.md with session 3 work | Done | This update |
 
 ## Monolith Tasks (Session 2)
 
@@ -74,6 +87,7 @@ All branches synced (pre-main = main). 14 submodules on latest main. 11 releases
 | claude-objects | 0.3.0 | PR#5 |
 | jade-dev-assist | 1.2.0 | PR#3 |
 | jadecli-roadmap | 1.2.0 | PR#15 |
+| jade-ide | 0.2.0 | PR#8 |
 
 ## Monolith Scripts
 
@@ -87,6 +101,19 @@ All branches synced (pre-main = main). 14 submodules on latest main. 11 releases
 | `scripts/sync-branches.sh` | Sync pre-main/main across 15 repos |
 | `scripts/merge-releases.sh` | Batch merge release-please PRs |
 | `scripts/health-check.sh` | Ecosystem health check (submodules, GitHub, Docker, GPU) |
+| `scripts/start-team.sh` | tmux 4-pane Agent Teams launcher |
+
+## Onboarding Backlog (23 issues)
+
+24 repos need onboarding into jade-monolith. Tracked as GitHub issues #3–#25.
+See `contributing-docs/REGISTRY.md` for full inventory and `REPO-CHECKLIST.md` for process.
+
+| Batch | Repos | Issues | Effort |
+|-------|-------|--------|--------|
+| 1: Near-zero | 7 | #3–#9 | Minimal |
+| 2: Branch cleanup | 8 | #10–#15, #24–#25 | Stale branches |
+| 3: Low debt | 6 | #16–#21 | 1-2 issues/PRs |
+| 4: Medium debt | 2 | #22–#23 | 3-10 PRs |
 
 ## Out of Scope (jadeflow ecosystem)
 
