@@ -1,7 +1,7 @@
-# Tasks — Checkpoint 2026-02-07T07:10Z
+# Tasks — Checkpoint 2026-02-07T09:30Z
 
-36 tasks completed. 23 onboarding issues open (backlog for 24 remaining repos).
-All branches synced (pre-main = main). 14 submodules on latest main. 12 releases cut.
+44 tasks completed. 0 onboarding issues open (all 24 repos resolved).
+19 submodules in packages/. 19 repos archived. 12 releases cut.
 
 ## Ecosystem Status
 
@@ -21,7 +21,28 @@ All branches synced (pre-main = main). 14 submodules on latest main. 12 releases
 | jadecli-infra | [jadecli/jadecli-infra](https://github.com/jadecli/jadecli-infra) | Clean — released 1.2.0 |
 | jadecli-roadmap | [jadecli/jadecli-roadmap-and-architecture](https://github.com/jadecli/jadecli-roadmap-and-architecture) | Clean — released 1.2.0 |
 | jadeflow-dev-scaffold | [jadecli/jadeflow-dev-scaffold](https://github.com/jadecli/jadeflow-dev-scaffold) | Clean |
+| jade-wslg | [jadecli/26-04-wslg-build-template](https://github.com/jadecli/26-04-wslg-build-template) | Onboarded |
+| mac-audit | [jadecli/mac-audit](https://github.com/jadecli/mac-audit) | Onboarded |
+| macos-claude-assist | [jadecli/macos-claude-assist](https://github.com/jadecli/macos-claude-assist) | Onboarded |
+| parallel-ai-mcp | [jadecli/parallel-ai-mcp](https://github.com/jadecli/parallel-ai-mcp) | Onboarded |
+| jadecli-marketplace | [jadecli/jade-swarm-superpowers](https://github.com/jadecli/jade-swarm-superpowers) | Onboarded |
 | jade-monolith | [jadecli/jade-monolith](https://github.com/jadecli/jade-monolith) | Clean |
+
+## Session 4 Tasks — Triage Execution
+
+| Task ID | Title | Status | Resolution |
+|---------|-------|--------|------------|
+| monolith/triage-assess | Assess all 24 triage repos (batches 1–4) | Done | 5 ONBOARD, 18 ARCHIVE, 1 MERGE+ARCHIVE |
+| monolith/triage-backup | Save backup branch with all 24 submodules | Done | feat/triage-submodules branch + TRIAGE-DECISIONS.md |
+| monolith/extract-preservation | Create GitHub issues for content worth preserving | Done | jade-dev-assist #17, #18; jade-index #16, #17 |
+| monolith/migrate-dotfiles | Migrate jade-dotfiles content to 3 target repos | Done | roadmap#16, settings#22, dotfiles#7 merged |
+| monolith/close-jadecli-prs | Close 7 stale PRs on jadecli repo | Done | PRs #1–#3, #5–#8 closed with redirect comments |
+| monolith/close-batch34-items | Close open items on batch 3/4 repos | Done | 15 items closed across 7 repos |
+| monolith/onboard-5-repos | Add 5 repos as submodules in packages/ | Done | PR#27 merged — 19 total submodules |
+| monolith/archive-18-repos | Archive 18 repos on GitHub | Done | 3 migration PRs merged, 25 branches deleted, 18 repos archived |
+| monolith/remove-triage | Remove packages-triage/ local directory | Done | Local-only dir removed, no commit needed |
+| monolith/close-onboarding-issues | Close all 23 onboarding issues (#3–#25) | Done | All closed with resolution comments |
+| monolith/update-tasks-4 | Update TASKS.md and REGISTRY.md | Done | This update |
 
 ## Session 3 Tasks
 
@@ -103,17 +124,16 @@ All branches synced (pre-main = main). 14 submodules on latest main. 12 releases
 | `scripts/health-check.sh` | Ecosystem health check (submodules, GitHub, Docker, GPU) |
 | `scripts/start-team.sh` | tmux 4-pane Agent Teams launcher |
 
-## Onboarding Backlog (23 issues)
+## Onboarding Backlog — COMPLETE
 
-24 repos need onboarding into jade-monolith. Tracked as GitHub issues #3–#25.
-See `contributing-docs/REGISTRY.md` for full inventory and `REPO-CHECKLIST.md` for process.
+All 24 repos resolved. 23 onboarding issues (#3–#25) closed.
 
-| Batch | Repos | Issues | Effort |
-|-------|-------|--------|--------|
-| 1: Near-zero | 7 | #3–#9 | Minimal |
-| 2: Branch cleanup | 8 | #10–#15, #24–#25 | Stale branches |
-| 3: Low debt | 6 | #16–#21 | 1-2 issues/PRs |
-| 4: Medium debt | 2 | #22–#23 | 3-10 PRs |
+| Batch | Decision | Repos |
+|-------|----------|-------|
+| 1: Near-zero (7) | 7 archived | ai2plans-gui, wsl2-dotfiles-for-claude, CLAUDE_CUSTOM_INSTRUCTIONS_PROJECTS, gordon-workspace, private_forks, public-repo-to-private-fork, jade-dotfiles |
+| 2: Branch cleanup (8) | 5 archived, 3 onboarded | Archived: agent-skills, agent-skills-1, claude-code-plugins, claude-plugins, claude-plugins-1. Onboarded: macos-claude-assist, parallel-ai-mcp, jade-swarm-superpowers→jadecli-marketplace |
+| 3: Low debt (6) | 4 archived, 2 onboarded | Archived: claude-cli-assist, jade-dotfiles-dev, jadecli-claudellama-docker, jadecli-docker-claude-experimentation, jadecli_platform_claude. Onboarded: mac-audit→jade-wslg |
+| 4: Medium debt (2) | 1 archived, 1 onboarded | Archived: jadecli. Onboarded: 26-04-wslg-build-template→jade-wslg |
 
 ## Out of Scope (jadeflow ecosystem)
 
