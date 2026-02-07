@@ -109,6 +109,17 @@
       "blocked_by": [],
       "labels": ["feat"],
       "created_at": "2026-02-07"
+    },
+    {
+      "id": "monolith/jadebot-v107-deploy-plan",
+      "title": "Create jadebot-v107 deployment plan: OpenClaw + Ollama Docker bot",
+      "description": "Create validated step-by-step deployment plan for jadebot-v107: Docker-based OpenClaw bot using Ollama (qwen3:8b) with Claude orchestrated swarm. Includes Docker Compose, gateway config, Slack channel, and ClawHub skills. Targets jade-docker package.",
+      "package": "_monolith",
+      "status": "completed",
+      "complexity": "L",
+      "blocked_by": [],
+      "labels": ["feat", "docs"],
+      "created_at": "2026-02-07"
     }
   ]
 }
