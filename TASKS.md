@@ -1,28 +1,41 @@
-# Tasks — Checkpoint 2026-02-07T05:35Z
+# Tasks — Checkpoint 2026-02-07T06:00Z
 
-All 21 tasks completed. Zero open issues, zero open PRs across core ecosystem.
+28 tasks completed. Zero open issues, zero open PRs across core ecosystem.
+All branches synced (pre-main = main). 14 submodules on latest main. 11 releases cut.
 
-## Summary
+## Ecosystem Status
 
 | Package | GitHub Repo | Status |
 |---------|-------------|--------|
-| claude-objects | [jadecli/claude-objects](https://github.com/jadecli/claude-objects) | Clean — 0 open issues, 0 open PRs |
+| claude-objects | [jadecli/claude-objects](https://github.com/jadecli/claude-objects) | Clean — released 0.3.0 |
 | dotfiles | [jadecli/dotfiles](https://github.com/jadecli/dotfiles) | Clean |
 | jade-claude-settings | [jadecli/jade-claude-settings](https://github.com/jadecli/jade-claude-settings) | Clean — released 0.4.0 |
 | jade-cli | [jadecli/jade-cli](https://github.com/jadecli/jade-cli) | Clean — released 0.2.0 |
 | jade-dev-assist | [jadecli/jade-dev-assist](https://github.com/jadecli/jade-dev-assist) | Clean — released 1.2.0 |
 | jade-docker | [jadecli/jade-docker](https://github.com/jadecli/jade-docker) | Clean |
 | jade-ecosystem-assist | [jadecli/jade-ecosystem-assist](https://github.com/jadecli/jade-ecosystem-assist) | Clean — released 0.4.0 |
-| jade-ide | [jadecli/jade-ide](https://github.com/jadecli/jade-ide) | Clean — 0 open issues, 0 open PRs |
+| jade-ide | [jadecli/jade-ide](https://github.com/jadecli/jade-ide) | Clean |
 | jade-index | [jadecli/jade-index](https://github.com/jadecli/jade-index) | Clean — released 0.2.0 |
 | jade-swarm | [jadecli/jade-swarm](https://github.com/jadecli/jade-swarm) | Clean — released 4.3.0 |
 | jadecli-codespaces | [jadecli/jadecli-codespaces](https://github.com/jadecli/jadecli-codespaces) | Clean |
 | jadecli-infra | [jadecli/jadecli-infra](https://github.com/jadecli/jadecli-infra) | Clean — released 1.2.0 |
-| jadecli-roadmap | [jadecli/jadecli-roadmap-and-architecture](https://github.com/jadecli/jadecli-roadmap-and-architecture) | Clean |
+| jadecli-roadmap | [jadecli/jadecli-roadmap-and-architecture](https://github.com/jadecli/jadecli-roadmap-and-architecture) | Clean — released 1.2.0 |
 | jadeflow-dev-scaffold | [jadecli/jadeflow-dev-scaffold](https://github.com/jadecli/jadeflow-dev-scaffold) | Clean |
 | jade-monolith | [jadecli/jade-monolith](https://github.com/jadecli/jade-monolith) | Clean |
 
-## Completed Tasks
+## Monolith Tasks (Session 2)
+
+| Task ID | Title | Status | Resolution |
+|---------|-------|--------|------------|
+| monolith/statusline | Add Claude Code statusline | Done | scripts/statusline.sh + .claude/settings.json |
+| monolith/sync-submodules | Update all 14 submodules to latest main | Done | 13 updated, jade-docker already current |
+| monolith/merge-roadmap-release | Merge jadecli-roadmap release-please PR #15 | Done | v1.2.0 released, pre-main synced |
+| monolith/submodule-update-script | Batch submodule update script | Done | scripts/update-submodules.sh |
+| monolith/pre-main-sync-script | Pre-main/main sync script | Done | scripts/sync-branches.sh |
+| monolith/release-merge-script | Batch release-please merge script | Done | scripts/merge-releases.sh |
+| monolith/ecosystem-health-script | Ecosystem health check script | Done | scripts/health-check.sh |
+
+## Triage Tasks (Session 1)
 
 | Task ID | Package | Title | Resolution |
 |---------|---------|-------|------------|
@@ -37,9 +50,9 @@ All 21 tasks completed. Zero open issues, zero open PRs across core ecosystem.
 | jade-dev-assist/triage-issues | jade-dev-assist | Triage issues #11–#13 | All closed |
 | jade-dev-assist/review-pre-main | jade-dev-assist | Review pre-main after PRs #5, #9 merge | Both merged, release 1.2.0 cut |
 | jade-docker/review-pre-main | jade-docker | Review and validate pre-main state | Clean |
-| jade-ecosystem-assist/triage-issues | jade-ecosystem-assist | Triage issues #2–#4, #12 | All closed; #3 resolved by PR#14 (context script) |
-| jade-ide/assess-prs | jade-ide | Assess PR #2 and PR #3 | Both closed (superseded by PR#4), tracking issues closed |
-| jade-index/triage-issues | jade-index | Triage issues #9–#14 (Neon roadmap) | All closed (merged PRs + deferred #10) |
+| jade-ecosystem-assist/triage-issues | jade-ecosystem-assist | Triage issues #2–#4, #12 | All closed; #3 resolved by PR#14 |
+| jade-ide/assess-prs | jade-ide | Assess PR #2 and PR #3 | Both closed (superseded by PR#4) |
+| jade-index/triage-issues | jade-index | Triage issues #9–#14 (Neon roadmap) | All closed |
 | jade-index/review-pre-main | jade-index | Review pre-main after cherry-pick | Release 0.2.0 cut |
 | jade-swarm/triage-issues | jade-swarm | Triage issues #5–#7 | All closed (PRs merged) |
 | jadecli-codespaces/triage-issues | jadecli-codespaces | Triage issues #9–#12 | All closed |
@@ -48,7 +61,7 @@ All 21 tasks completed. Zero open issues, zero open PRs across core ecosystem.
 | jadecli-roadmap/triage-issues | jadecli-roadmap | Triage issues #9–#12 | All closed |
 | jadeflow-dev-scaffold/triage-issues | jadeflow-dev-scaffold | Triage issues #1, #2 | Open (separate jadeflow ecosystem) |
 
-## Releases Cut This Session
+## Releases Cut
 
 | Package | Version | PR |
 |---------|---------|-----|
@@ -60,7 +73,21 @@ All 21 tasks completed. Zero open issues, zero open PRs across core ecosystem.
 | jadecli-infra | 1.2.0 | PR#4 |
 | claude-objects | 0.3.0 | PR#5 |
 | jade-dev-assist | 1.2.0 | PR#3 |
+| jadecli-roadmap | 1.2.0 | PR#15 |
+
+## Monolith Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `scripts/statusline.sh` | Claude Code statusline (branch + ecosystem counts) |
+| `scripts/git-status-all.sh` | 14-repo git status (table/JSON) |
+| `scripts/pr-health.sh` | PR health dashboard |
+| `scripts/create-issues-for-prs.sh` | Auto-link PRs to issues |
+| `scripts/update-submodules.sh` | Batch update submodules to latest main |
+| `scripts/sync-branches.sh` | Sync pre-main/main across 15 repos |
+| `scripts/merge-releases.sh` | Batch merge release-please PRs |
+| `scripts/health-check.sh` | Ecosystem health check (submodules, GitHub, Docker, GPU) |
 
 ## Out of Scope (jadeflow ecosystem)
 
-The jadeflow repos have their own task backlog (30 issues, 15 PRs in jadeflow; 7 PRs in jadecli). These are tracked separately and not part of the core jadecli ecosystem triage.
+The jadeflow repos have their own task backlog. Tracked separately.
