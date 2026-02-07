@@ -25,43 +25,87 @@ These repos are fully triaged, all branches synced, and tracked as jade-monolith
 
 ## Needs Triage (24/39)
 
-### Near-Zero (0 issues, 0 PRs, no pre-main branch)
+### Batch 1: Near-Zero — 0 issues, 0 PRs, minimal branches (9 repos)
 
-These repos are already clean on GitHub but not yet added as jade-monolith submodules. Simplest to onboard.
+Simplest to onboard. Only need `pre-main` branch + submodule addition. Some may be candidates for archiving.
 
-- [ ] agent-skills — Agent Skills for Neon Serverless Postgres.
-- [ ] agent-skills-1 — Agent Skills for Neon Serverless Postgres (duplicate?).
-- [ ] ai2plans-gui — (no description).
-- [ ] claude-code-plugins — (no description).
-- [ ] claude-plugins — (no description).
-- [ ] claude-plugins-1 — (no description).
-- [ ] CLAUDE_CUSTOM_INSTRUCTIONS_PROJECTS — (no description).
-- [ ] gordon-workspace — (no description).
-- [ ] jade-dotfiles — Org dotfiles, architecture docs, Claude Code plugins.
-- [ ] jade-swarm-superpowers — Agentic skills framework (upstream of jade-swarm).
-- [ ] macos-claude-assist — (no description).
-- [ ] parallel-ai-mcp — (no description).
-- [ ] private_forks — (no description).
-- [ ] public-repo-to-private-fork — (no description).
-- [ ] wsl2-dotfiles-for-claude — WSL2 dotfiles scaffold for Claude Code.
+| Repo | Branches | Description | Notes |
+|------|----------|-------------|-------|
+| ai2plans-gui | 1 (`main`) | (no description) | Single branch, likely minimal |
+| CLAUDE_CUSTOM_INSTRUCTIONS_PROJECTS | 1 (`main`) | (no description) | Single branch |
+| gordon-workspace | 1 (`main`) | (no description) | Single branch |
+| jade-dotfiles | 2 (`main`, `claude/research-vscode-fork-6Xiv5`) | Org dotfiles, arch docs, Claude Code plugins | 1 stale feature branch |
+| jade-swarm-superpowers | 16 branches | Agentic skills framework (upstream of jade-swarm) | Heavy branching: `jadecli-main`, `dev`, `enable-codex`, `opencode-native-skills`, etc. Needs branch cleanup |
+| private_forks | 1 (`main`) | (no description) | Single branch |
+| public-repo-to-private-fork | 1 (`main`) | (no description) | Single branch |
+| wsl2-dotfiles-for-claude | 1 (`main`) | WSL2 dotfiles scaffold for Claude Code | Single branch |
 
-### Low Debt (1-2 issues/PRs)
+### Batch 2: Near-Zero with feature branches — 0 issues, 0 PRs, multiple branches (6 repos)
 
-- [ ] claude-cli-assist — 0 issues, 2 PRs.
-- [ ] jade-dotfiles-dev — 0 issues, 1 PR.
-- [ ] jadecli-claudellama-docker — 0 issues, 1 PR. Default branch: `master`.
-- [ ] jadecli-docker-claude-experimentation — 0 issues, 1 PR.
-- [ ] jadecli_platform_claude — 1 issue, 0 PRs.
-- [ ] mac-audit — 0 issues, 1 PR. Default branch: `staging`.
+Clean on GitHub but have stale feature branches to clean up.
 
-### Medium Debt (3-10 issues/PRs)
+| Repo | Branches | Description | Branch Details |
+|------|----------|-------------|----------------|
+| agent-skills | 5 | Neon Serverless Postgres skills | `jadecli-main`, `danieltprice-patch-1`, `refactor/rename-skill-neon-postgres`, `update-neon-urls` |
+| agent-skills-1 | 5 | Neon skills (duplicate of above?) | Identical branch structure to agent-skills |
+| claude-code-plugins | 10 | (no description) | `jadecli-main` + 8 feature branches (`zb/*`, `skill/ruff`) |
+| claude-plugins | 5 | (no description) | `jadecli-main`, `mcp-toolkit-beta-plugin`, `slim/cleanup-naming`, `task/marketplace-bootstrap` |
+| claude-plugins-1 | 5 | (no description) | Identical branch structure to claude-plugins |
+| macos-claude-assist | 4 | (no description) | `claude/migrate-jadecli-org`, `docs/update-documentation`, `fix/restore-package-name` |
 
-- [ ] 26-04-wslg-build-template — 0 issues, 8 PRs.
-- [ ] jadecli — 1 issue, 7 PRs.
+### Batch 3: Low Debt — 1-2 issues/PRs (6 repos)
 
-### High Debt (10+ issues/PRs)
+| Repo | Issues | PRs | Branches | Description | Branch Details |
+|------|--------|-----|----------|-------------|----------------|
+| claude-cli-assist | 0 | 2 | 5 | (no description) | `claude/*` agent branches, `feat/multi-agent`, `release-please--*` |
+| jade-dotfiles-dev | 0 | 1 | 2 | (no description) | `feature/taskmaster-tasks` |
+| jadecli-claudellama-docker | 0 | 1 | 3 | (no description) | Default: `master`. `claude/research-*`, `feat/fastmcpp3-*` |
+| jadecli-docker-claude-experimentation | 0 | 1 | 3 | (no description) | `claude/add-implementation-plan`, `feature/multi-agent-research` |
+| jadecli_platform_claude | 1 | 0 | 1 | (no description) | Just `main` |
+| mac-audit | 0 | 1 | 4 | (no description) | Default: `staging`. Has `release-please--*` branch |
 
-- [ ] jadeflow — 46 issues, 19 PRs. Tracked separately as jadeflow ecosystem.
+### Batch 4: Medium Debt — 3-10 issues/PRs (2 repos)
+
+| Repo | Issues | PRs | Branches | Description | Branch Details |
+|------|--------|-----|----------|-------------|----------------|
+| 26-04-wslg-build-template | 0 | 8 | 13 | (no description) | `copilot/*`, `docs/*`, `feat/wsl-*` (8 feature branches), `staging` |
+| jadecli | 1 | 7 | 9 | (no description) | All `claude/*` agent branches + `feat/claude-context-codespaces` |
+
+### Batch 5: High Debt (1 repo)
+
+| Repo | Issues | PRs | Branches | Description | Branch Details |
+|------|--------|-----|----------|-------------|----------------|
+| jadeflow | 46 | 19 | 20 | (no description) | `claude/*` research branches, `feat/*`, `test/*`. Separate project. |
+
+### Batch 6: Stale/Feature-heavy — 0 issues, 0 PRs, many branches (1 repo)
+
+| Repo | Branches | Description | Branch Details |
+|------|----------|-------------|----------------|
+| parallel-ai-mcp | 10 | (no description) | 7 `01-31-feat_indexer_*` branches, `coderabbitai/*`, `release-please--*` |
+
+## Duplicate Candidates
+
+These pairs appear to be duplicates and should be assessed for archiving:
+
+| Original | Duplicate | Evidence |
+|----------|-----------|----------|
+| agent-skills | agent-skills-1 | Identical description, identical branch structure |
+| claude-plugins | claude-plugins-1 | Identical branch structure |
+| jade-swarm (zero-debt) | jade-swarm-superpowers | jade-swarm is the private fork; superpowers is upstream |
+| dotfiles (zero-debt) | jade-dotfiles | Both manage dotfiles |
+| dotfiles (zero-debt) | wsl2-dotfiles-for-claude | WSL2-specific dotfiles |
+
+## Archive Candidates
+
+Repos that appear to be one-off experiments or superseded:
+
+| Repo | Reason |
+|------|--------|
+| CLAUDE_CUSTOM_INSTRUCTIONS_PROJECTS | Likely superseded by jade-claude-settings |
+| gordon-workspace | Unknown purpose, single branch |
+| private_forks | Utility repo, may not need tracking |
+| public-repo-to-private-fork | Utility repo, may not need tracking |
+| jade-dotfiles-dev | Likely superseded by dotfiles |
 
 ## Onboarding Process
 
@@ -69,25 +113,16 @@ For each repo to reach zero debt:
 
 1. **Assess** — Check open issues/PRs, determine if they're stale or actionable
 2. **Triage** — Close stale issues/PRs, merge valid work, resolve conflicts
-3. **Branch setup** — Create `pre-main` branch if missing, sync with `main`
-4. **Submodule** — Add as git submodule in `jade-monolith/packages/`
-5. **Release** — Merge any release-please PRs, cut versions if applicable
-6. **Verify** — Run `scripts/health-check.sh` to confirm zero debt
+3. **Branch cleanup** — Delete stale feature branches
+4. **Branch setup** — Create `pre-main` branch if missing, sync with `main`
+5. **Submodule** — Add as git submodule in `jade-monolith/packages/`
+6. **Release** — Merge any release-please PRs, cut versions if applicable
+7. **Verify** — Run `scripts/health-check.sh` to confirm zero debt
 
-## Priority Order (Recommended)
+## Recommended Approach
 
-Grouped by effort, simplest first:
-
-### Batch 1: Near-Zero (15 repos, ~5 min each)
-Already clean, just need submodule addition and branch setup.
-See "Near-Zero" list above.
-
-### Batch 2: Low Debt (6 repos, ~15 min each)
-1-2 PRs/issues to triage before onboarding.
-See "Low Debt" list above.
-
-### Batch 3: Medium Debt (2 repos, ~30 min each)
-Multiple PRs need assessment.
-
-### Batch 4: High Debt (1 repo)
-jadeflow has 65 open items — separate project.
+1. **Human review** — Decide which repos to archive vs onboard (this PR)
+2. **Batch 1** — Onboard the ~9 simplest repos (parallel, automated)
+3. **Batch 2** — Clean branches + onboard 6 repos
+4. **Batch 3** — Triage 1-2 PRs each for 6 repos
+5. **Batch 4+** — Tackle medium/high debt repos individually
