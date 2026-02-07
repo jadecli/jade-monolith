@@ -1,0 +1,175 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://jadecli.dev/schemas/ats/v0.1.0/task.schema.json",
+  "title": "ATS Task",
+  "description": "Validates YAML frontmatter from TASK.md files in the Agent Task Spec (ATS) v0.1.0 system.",
+  "type": "object",
+  "required": ["id", "type", "subject", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Lowercase kebab-case task identifier."
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "build",
+        "ci",
+        "chore",
+        "revert"
+      ],
+      "description": "Conventional commit type for this task."
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "description": "Short description of the task (conventional commit subject line)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "locked",
+        "in_progress",
+        "blocked",
+        "review",
+        "completed",
+        "rejected"
+      ],
+      "description": "Current lifecycle status of the task."
+    },
+    "description": {
+      "type": "string",
+      "description": "Longer description of the task."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Which agent owns the task."
+    },
+    "scope": {
+      "type": "string",
+      "description": "Module or area scope."
+    },
+    "breaking": {
+      "type": "boolean",
+      "description": "Whether this task introduces a breaking change."
+    },
+    "branch": {
+      "type": "string",
+      "description": "Git branch associated with this task."
+    },
+    "blockedBy": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Task IDs that block this task."
+    },
+    "blocks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Task IDs that this task blocks."
+    },
+    "activeForm": {
+      "type": "string",
+      "description": "Present continuous form for status display (e.g. 'implementing auth module')."
+    },
+    "estimatedTokens": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Estimated token budget for completing this task."
+    },
+    "maxTurns": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Maximum agent turns allowed for this task."
+    },
+    "testFirst": {
+      "type": "boolean",
+      "description": "Whether this task follows TDD (write tests before implementation)."
+    },
+    "assignableTo": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Agent names that can claim this task."
+    },
+    "permissionMode": {
+      "type": "string",
+      "description": "Permission mode for the agent working on this task."
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tools allowed for this task."
+    },
+    "disallowedTools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tools disallowed for this task."
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Skills available for this task."
+    },
+    "mcpServers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "MCP servers required for this task."
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Acceptance criteria for task completion."
+    },
+    "traceId": {
+      "type": "string",
+      "description": "Trace identifier for observability."
+    },
+    "relatedIssues": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "description": "GitHub issue numbers related to this task."
+    },
+    "relatedSkills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Skills related to this task."
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Extensible metadata bag for custom fields."
+    }
+  }
+}
