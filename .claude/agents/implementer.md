@@ -4,7 +4,10 @@ description: >
   Implements features strictly according to approved plans. Writes production code,
   follows existing patterns, runs quality gates. Does not add features or refactor
   beyond the plan scope. Does not write tests — that is the test-writer's job.
-model: opus
+model: sonnet
+permissionMode: acceptEdits
+maxTurns: 25
+memory: project
 tools:
   - Read
   - Write
@@ -12,7 +15,7 @@ tools:
   - Glob
   - Grep
   - Bash
-  - Task
+  - Task(Explore)
   - TaskCreate
   - TaskList
   - TaskUpdate
@@ -21,6 +24,15 @@ tools:
 disallowedTools:
   - WebSearch
   - WebFetch
+skills:
+  - quality-gate
+hooks:
+  PostToolUse:
+    - matcher: "Write|Edit"
+      hooks:
+        - type: command
+          command: "$CLAUDE_PROJECT_DIR/.claude/hooks/post-edit-lint.sh"
+          timeout: 30
 ---
 
 # Implementer Agent
@@ -51,6 +63,7 @@ You write production code based on approved plans — nothing more, nothing less
 - Do NOT write tests — the test-writer owns test files.
 - Do NOT modify test files under any circumstances.
 - If the plan is ambiguous, message the Architect — do not guess.
+- You can spawn Explore subagents for research, but no other agent types.
 
 ## Commit Conventions
 
@@ -80,3 +93,9 @@ Every commit message must reference the task or plan it implements.
 - Adding error handling for impossible scenarios
 - Writing docstrings for code you didn't change
 - Refactoring imports or formatting in untouched files
+
+## Memory
+
+Record implementation patterns, common pitfalls, and library usage notes
+in your agent memory. When you encounter a tricky API or non-obvious pattern,
+note it so future sessions can avoid the same discovery process.
