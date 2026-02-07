@@ -109,6 +109,17 @@
       "blocked_by": [],
       "labels": ["feat"],
       "created_at": "2026-02-07"
+    },
+    {
+      "id": "monolith/setup-local-optimization",
+      "title": "Add local development setup optimization guide",
+      "description": "Create scripts/setup-local.sh bootstrap script and docs/LOCAL_SETUP.md covering Claude Code CLI, Gemini CLI, Codex CLI, Docker, VS Code, Cursor IDE configuration optimized for 2026 AI-assisted development. Based on insights from Anthropic agent teams engineering and modern CLI tooling.",
+      "package": "_monolith",
+      "status": "completed",
+      "complexity": "M",
+      "blocked_by": [],
+      "labels": ["feat", "docs"],
+      "created_at": "2026-02-07"
     }
   ]
 }
