@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/projects/jade-monolith/scripts/statusline.sh"
+  }
+}
