@@ -1,63 +1,66 @@
-# Remaining Tasks
+# Tasks — Checkpoint 2026-02-07T05:35Z
 
-19 pending tasks across 14 packages. 2 monolith-level tasks completed.
+All 21 tasks completed. Zero open issues, zero open PRs across core ecosystem.
 
 ## Summary
 
-| Package | GitHub Repo | Pending | Types |
-|---------|-------------|---------|-------|
-| claude-objects | [jadecli/claude-objects](https://github.com/jadecli/claude-objects) | 1 | chore |
-| dotfiles | [jadecli/dotfiles](https://github.com/jadecli/dotfiles) | 1 | chore |
-| jade-claude-settings | [jadecli/jade-claude-settings](https://github.com/jadecli/jade-claude-settings) | 2 | feat, chore |
-| jade-cli | [jadecli/jade-cli](https://github.com/jadecli/jade-cli) | 2 | chore, test |
-| jade-dev-assist | [jadecli/jade-dev-assist](https://github.com/jadecli/jade-dev-assist) | 2 | chore, test |
-| jade-docker | [jadecli/jade-docker](https://github.com/jadecli/jade-docker) | 1 | chore |
-| jade-ecosystem-assist | [jadecli/jade-ecosystem-assist](https://github.com/jadecli/jade-ecosystem-assist) | 1 | chore |
-| jade-ide | [jadecli/jade-ide](https://github.com/jadecli/jade-ide) | 1 | chore |
-| jade-index | [jadecli/jade-index](https://github.com/jadecli/jade-index) | 2 | chore, test |
-| jade-swarm | [jadecli/jade-swarm](https://github.com/jadecli/jade-swarm) | 1 | chore |
-| jadecli-codespaces | [jadecli/jadecli-codespaces](https://github.com/jadecli/jadecli-codespaces) | 1 | chore |
-| jadecli-infra | [jadecli/jadecli-infra](https://github.com/jadecli/jadecli-infra) | 1 | chore |
-| jadecli-roadmap-and-architecture | [jadecli/jadecli-roadmap-and-architecture](https://github.com/jadecli/jadecli-roadmap-and-architecture) | 2 | chore, docs |
-| jadeflow-dev-scaffold | [jadecli/jadeflow-dev-scaffold](https://github.com/jadecli/jadeflow-dev-scaffold) | 1 | chore |
-| **Total** | | **19** | |
-
-## All Tasks
-
-| Task ID | Package | GitHub Repo | Type | Size | Title | Blocked By |
-|---------|---------|-------------|------|------|-------|------------|
-| claude-objects/review-pre-main | claude-objects | [jadecli/claude-objects](https://github.com/jadecli/claude-objects) | chore | S | Review and validate pre-main state | — |
-| dotfiles/review-pre-main | dotfiles | [jadecli/dotfiles](https://github.com/jadecli/dotfiles) | chore | M | Review pre-main; triage issues #4, #5, #6 | — |
-| jade-claude-settings/merge-pr-14 | jade-claude-settings | [jadecli/jade-claude-settings](https://github.com/jadecli/jade-claude-settings) | feat | S | Merge [PR #14](https://github.com/jadecli/jade-claude-settings/pull/14) (commitlint + husky) | — |
-| jade-claude-settings/triage-issues | jade-claude-settings | [jadecli/jade-claude-settings](https://github.com/jadecli/jade-claude-settings) | chore | S | Triage issues [#3](https://github.com/jadecli/jade-claude-settings/issues/3), [#4](https://github.com/jadecli/jade-claude-settings/issues/4), [#5](https://github.com/jadecli/jade-claude-settings/issues/5) | — |
-| jade-cli/triage-issues | jade-cli | [jadecli/jade-cli](https://github.com/jadecli/jade-cli) | chore | M | Triage issues [#11](https://github.com/jadecli/jade-cli/issues/11)–[#14](https://github.com/jadecli/jade-cli/issues/14) | — |
-| jade-cli/review-pre-main | jade-cli | [jadecli/jade-cli](https://github.com/jadecli/jade-cli) | test | M | Review pre-main after PR #7 merge | jade-cli/triage-issues |
-| jade-dev-assist/triage-issues | jade-dev-assist | [jadecli/jade-dev-assist](https://github.com/jadecli/jade-dev-assist) | chore | M | Triage issues [#11](https://github.com/jadecli/jade-dev-assist/issues/11)–[#13](https://github.com/jadecli/jade-dev-assist/issues/13) | — |
-| jade-dev-assist/review-pre-main | jade-dev-assist | [jadecli/jade-dev-assist](https://github.com/jadecli/jade-dev-assist) | test | M | Review pre-main after PRs #5, #9 merge | jade-dev-assist/triage-issues |
-| jade-docker/review-pre-main | jade-docker | [jadecli/jade-docker](https://github.com/jadecli/jade-docker) | chore | S | Review and validate pre-main state | — |
-| jade-ecosystem-assist/triage-issues | jade-ecosystem-assist | [jadecli/jade-ecosystem-assist](https://github.com/jadecli/jade-ecosystem-assist) | chore | M | Triage issues [#2](https://github.com/jadecli/jade-ecosystem-assist/issues/2)–[#4](https://github.com/jadecli/jade-ecosystem-assist/issues/4), [#12](https://github.com/jadecli/jade-ecosystem-assist/issues/12) | — |
-| jade-ide/assess-prs | jade-ide | [jadecli/jade-ide](https://github.com/jadecli/jade-ide) | chore | L | Assess [PR #2](https://github.com/jadecli/jade-ide/pull/2) and [PR #3](https://github.com/jadecli/jade-ide/pull/3) | — |
-| jade-index/triage-issues | jade-index | [jadecli/jade-index](https://github.com/jadecli/jade-index) | chore | L | Triage issues [#9](https://github.com/jadecli/jade-index/issues/9)–[#14](https://github.com/jadecli/jade-index/issues/14) (Neon roadmap) | — |
-| jade-index/review-pre-main | jade-index | [jadecli/jade-index](https://github.com/jadecli/jade-index) | test | M | Review pre-main after cherry-pick from PR #7 | — |
-| jade-swarm/triage-issues | jade-swarm | [jadecli/jade-swarm](https://github.com/jadecli/jade-swarm) | chore | M | Triage issues [#5](https://github.com/jadecli/jade-swarm/issues/5)–[#7](https://github.com/jadecli/jade-swarm/issues/7) | — |
-| jadecli-codespaces/triage-issues | jadecli-codespaces | [jadecli/jadecli-codespaces](https://github.com/jadecli/jadecli-codespaces) | chore | M | Triage issues [#9](https://github.com/jadecli/jadecli-codespaces/issues/9)–[#12](https://github.com/jadecli/jadecli-codespaces/issues/12) | — |
-| jadecli-infra/resolve-issue-6 | jadecli-infra | [jadecli/jadecli-infra](https://github.com/jadecli/jadecli-infra) | chore | S | Assess [issue #6](https://github.com/jadecli/jadecli-infra/issues/6) (e2e smoke test) | — |
-| jadecli-roadmap/close-tracking-issue | jadecli-roadmap-and-architecture | [jadecli/jadecli-roadmap-and-architecture](https://github.com/jadecli/jadecli-roadmap-and-architecture) | chore | S | Close [issue #13](https://github.com/jadecli/jadecli-roadmap-and-architecture/issues/13) (all conflicts resolved) | — |
-| jadecli-roadmap/triage-issues | jadecli-roadmap-and-architecture | [jadecli/jadecli-roadmap-and-architecture](https://github.com/jadecli/jadecli-roadmap-and-architecture) | docs | M | Triage issues [#9](https://github.com/jadecli/jadecli-roadmap-and-architecture/issues/9)–[#12](https://github.com/jadecli/jadecli-roadmap-and-architecture/issues/12) | — |
-| jadeflow-dev-scaffold/triage-issues | jadeflow-dev-scaffold | [jadecli/jadeflow-dev-scaffold](https://github.com/jadecli/jadeflow-dev-scaffold) | chore | S | Triage issues [#1](https://github.com/jadecli/jadeflow-dev-scaffold/issues/1), [#2](https://github.com/jadecli/jadeflow-dev-scaffold/issues/2) | — |
+| Package | GitHub Repo | Status |
+|---------|-------------|--------|
+| claude-objects | [jadecli/claude-objects](https://github.com/jadecli/claude-objects) | Clean — 0 open issues, 0 open PRs |
+| dotfiles | [jadecli/dotfiles](https://github.com/jadecli/dotfiles) | Clean |
+| jade-claude-settings | [jadecli/jade-claude-settings](https://github.com/jadecli/jade-claude-settings) | Clean — released 0.4.0 |
+| jade-cli | [jadecli/jade-cli](https://github.com/jadecli/jade-cli) | Clean — released 0.2.0 |
+| jade-dev-assist | [jadecli/jade-dev-assist](https://github.com/jadecli/jade-dev-assist) | Clean — released 1.2.0 |
+| jade-docker | [jadecli/jade-docker](https://github.com/jadecli/jade-docker) | Clean |
+| jade-ecosystem-assist | [jadecli/jade-ecosystem-assist](https://github.com/jadecli/jade-ecosystem-assist) | Clean — released 0.4.0 |
+| jade-ide | [jadecli/jade-ide](https://github.com/jadecli/jade-ide) | Clean — 0 open issues, 0 open PRs |
+| jade-index | [jadecli/jade-index](https://github.com/jadecli/jade-index) | Clean — released 0.2.0 |
+| jade-swarm | [jadecli/jade-swarm](https://github.com/jadecli/jade-swarm) | Clean — released 4.3.0 |
+| jadecli-codespaces | [jadecli/jadecli-codespaces](https://github.com/jadecli/jadecli-codespaces) | Clean |
+| jadecli-infra | [jadecli/jadecli-infra](https://github.com/jadecli/jadecli-infra) | Clean — released 1.2.0 |
+| jadecli-roadmap | [jadecli/jadecli-roadmap-and-architecture](https://github.com/jadecli/jadecli-roadmap-and-architecture) | Clean |
+| jadeflow-dev-scaffold | [jadecli/jadeflow-dev-scaffold](https://github.com/jadecli/jadeflow-dev-scaffold) | Clean |
+| jade-monolith | [jadecli/jade-monolith](https://github.com/jadecli/jade-monolith) | Clean |
 
 ## Completed Tasks
 
-| Task ID | Package | Title |
-|---------|---------|-------|
-| monolith/initial-commit | _monolith | Initial commit of jade-monolith scaffolding |
-| monolith/update-projects-json | _monolith | Add jade-monolith to ~/.jade/projects.json |
+| Task ID | Package | Title | Resolution |
+|---------|---------|-------|------------|
+| monolith/initial-commit | _monolith | Initial commit of jade-monolith scaffolding | Committed |
+| monolith/update-projects-json | _monolith | Add jade-monolith to ~/.jade/projects.json | Done |
+| claude-objects/review-pre-main | claude-objects | Review and validate pre-main state | All PRs merged, 0 open issues |
+| dotfiles/review-pre-main | dotfiles | Review pre-main; triage issues | All issues closed |
+| jade-claude-settings/merge-pr-14 | jade-claude-settings | Merge commitlint + husky | PR#14 closed (bloated), PR#19 merged as clean replacement |
+| jade-claude-settings/triage-issues | jade-claude-settings | Triage issues #3–#5 | All closed |
+| jade-cli/triage-issues | jade-cli | Triage issues #11–#14 | All closed |
+| jade-cli/review-pre-main | jade-cli | Review pre-main after PR #7 merge | PR#7 merged, release 0.2.0 cut |
+| jade-dev-assist/triage-issues | jade-dev-assist | Triage issues #11–#13 | All closed |
+| jade-dev-assist/review-pre-main | jade-dev-assist | Review pre-main after PRs #5, #9 merge | Both merged, release 1.2.0 cut |
+| jade-docker/review-pre-main | jade-docker | Review and validate pre-main state | Clean |
+| jade-ecosystem-assist/triage-issues | jade-ecosystem-assist | Triage issues #2–#4, #12 | All closed; #3 resolved by PR#14 (context script) |
+| jade-ide/assess-prs | jade-ide | Assess PR #2 and PR #3 | Both closed (superseded by PR#4), tracking issues closed |
+| jade-index/triage-issues | jade-index | Triage issues #9–#14 (Neon roadmap) | All closed (merged PRs + deferred #10) |
+| jade-index/review-pre-main | jade-index | Review pre-main after cherry-pick | Release 0.2.0 cut |
+| jade-swarm/triage-issues | jade-swarm | Triage issues #5–#7 | All closed (PRs merged) |
+| jadecli-codespaces/triage-issues | jadecli-codespaces | Triage issues #9–#12 | All closed |
+| jadecli-infra/resolve-issue-6 | jadecli-infra | Assess issue #6 (e2e smoke test) | Closed — PR#5 merged |
+| jadecli-roadmap/close-tracking-issue | jadecli-roadmap | Close issue #13 | Closed |
+| jadecli-roadmap/triage-issues | jadecli-roadmap | Triage issues #9–#12 | All closed |
+| jadeflow-dev-scaffold/triage-issues | jadeflow-dev-scaffold | Triage issues #1, #2 | Open (separate jadeflow ecosystem) |
 
-## Task Types
+## Releases Cut This Session
 
-| Type | Count | Description |
-|------|-------|-------------|
-| chore | 13 | Triage issues, review branches, close tracking items |
-| test | 4 | Validate pre-main state with linter/tests |
-| feat | 1 | Merge remaining feature PR |
-| docs | 1 | Triage documentation issues |
+| Package | Version | PR |
+|---------|---------|-----|
+| jade-index | 0.2.0 | PR#2 |
+| jade-cli | 0.2.0 | PR#6 |
+| jade-claude-settings | 0.3.0 → 0.4.0 | PR#13, PR#20 |
+| jade-swarm | 4.3.0 | PR#1 |
+| jade-ecosystem-assist | 0.3.0 → 0.4.0 | PR#7, PR#15 |
+| jadecli-infra | 1.2.0 | PR#4 |
+| claude-objects | 0.3.0 | PR#5 |
+| jade-dev-assist | 1.2.0 | PR#3 |
+
+## Out of Scope (jadeflow ecosystem)
+
+The jadeflow repos have their own task backlog (30 issues, 15 PRs in jadeflow; 7 PRs in jadecli). These are tracked separately and not part of the core jadecli ecosystem triage.
