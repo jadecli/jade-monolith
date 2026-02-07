@@ -145,6 +145,46 @@ Auto-create GitHub issues for unlinked PRs and update PR bodies.
 - **Branches:** Work on `pre-main` within each submodule
 - **GitHub org:** `jadecli`
 
+## Claude Code Plugins
+
+6 marketplaces, 10 plugins enabled. Configured in `~/.claude/settings.json`.
+
+### Marketplaces
+
+| Marketplace | Source |
+|---|---|
+| claude-plugins-official | GitHub (anthropics) |
+| taskmaster | GitHub (eyaltoledano) |
+| docker | GitHub (docker) |
+| neon-agent-skills | GitHub (neondatabase) |
+| astral-sh | GitHub (astral-sh) |
+| jadecli | Local (~/projects/jadecli-marketplace) |
+
+### Plugins
+
+| Plugin | Marketplace | Scope |
+|---|---|---|
+| superpowers | claude-plugins-official | project |
+| code-review | claude-plugins-official | project |
+| pr-review-toolkit | claude-plugins-official | project |
+| code-simplifier | claude-plugins-official | project |
+| taskmaster | taskmaster | project |
+| mcp-toolkit | docker | project |
+| neon-postgres | neon-agent-skills | project |
+| astral | astral-sh | user |
+| jade-swarm-superpowers | jadecli | user |
+| jade-dev-assist | jadecli | user |
+
+### jadecli Marketplace (local symlinks)
+
+The `jadecli` marketplace at `~/projects/jadecli-marketplace/` uses local symlinks because the plugin repos are currently private. Inline `_TODO` comments mark the GitHub source configs ready to swap in.
+
+**Tracking issues:**
+- [jadeflow#72](https://github.com/jadecli/jadeflow/issues/72) — Make jade-swarm public
+- [jadeflow#73](https://github.com/jadecli/jadeflow/issues/73) — Make jade-dev-assist public
+
+After making repos public, update `marketplace.json` to replace `"source": "./..."` with the `_TODO_source_github` values, remove the symlinks and `_TODO` fields, then run `claude plugin marketplace update jadecli`.
+
 ## Hardware Context
 
 - CPU: AMD Ryzen 9 3900X (12c/24t)
