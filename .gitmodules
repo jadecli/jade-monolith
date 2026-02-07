@@ -54,3 +54,23 @@
 	path = packages/jadeflow-dev-scaffold
 	url = https://github.com/jadecli/jadeflow-dev-scaffold.git
 	branch = pre-main
+[submodule "packages/macos-claude-assist"]
+	path = packages/macos-claude-assist
+	url = https://github.com/jadecli/macos-claude-assist.git
+	branch = main
+[submodule "packages/parallel-ai-mcp"]
+	path = packages/parallel-ai-mcp
+	url = https://github.com/jadecli/parallel-ai-mcp.git
+	branch = main
+[submodule "packages/mac-audit"]
+	path = packages/mac-audit
+	url = https://github.com/jadecli/mac-audit.git
+	branch = staging
+[submodule "packages/jade-wslg"]
+	path = packages/jade-wslg
+	url = https://github.com/jadecli/26-04-wslg-build-template.git
+	branch = main
+[submodule "packages/jadecli-marketplace"]
+	path = packages/jadecli-marketplace
+	url = https://github.com/jadecli/jadecli-marketplace.git
+	branch = main
