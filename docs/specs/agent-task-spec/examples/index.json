@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "generatedAt": "2026-02-06T12:00:00Z",
+  "stats": {
+    "total": 3,
+    "pending": 1,
+    "locked": 0,
+    "in_progress": 1,
+    "blocked": 0,
+    "review": 0,
+    "completed": 1,
+    "rejected": 0
+  },
+  "tasks": [
+    {
+      "id": "feat-user-auth",
+      "type": "feat",
+      "subject": "Add user authentication with OAuth2 and JWT",
+      "status": "in_progress",
+      "owner": "implementer",
+      "scope": "auth",
+      "breaking": false,
+      "assignableTo": ["implementer", "auth-dev"]
+    },
+    {
+      "id": "fix-null-deref",
+      "type": "fix",
+      "subject": "Fix null pointer dereference in parser",
+      "status": "completed",
+      "owner": "debugger",
+      "scope": "parser"
+    },
+    {
+      "id": "test-api-coverage",
+      "type": "test",
+      "subject": "Add API integration test coverage",
+      "status": "pending",
+      "blockedBy": ["feat-user-auth"],
+      "assignableTo": ["test-writer", "integration-tester"]
+    }
+  ]
+}

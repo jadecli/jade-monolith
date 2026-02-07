@@ -109,6 +109,28 @@
       "blocked_by": [],
       "labels": ["feat"],
       "created_at": "2026-02-07"
+    },
+    {
+      "id": "monolith/100-agent-swarm",
+      "title": "Build 100-agent swarm system for Claude Code",
+      "description": "Create a 100-agent swarm system inspired by Kimi K2 architecture. Includes: 100 custom agent definitions in .claude/agents/ organized by role (orchestration, research, development, testing, review, DevOps, documentation, data, specialized, communication, debugging), orchestration skills in .claude/skills/, coordination hooks in .claude/hooks/, swarm management scripts, and updated settings.json. Uses Claude Code agent teams, subagents, skills, hooks, and persistent memory features.",
+      "package": "_monolith",
+      "status": "completed",
+      "complexity": "XL",
+      "blocked_by": [],
+      "labels": ["feat"],
+      "created_at": "2026-02-07"
+    },
+    {
+      "id": "monolith/agent-task-spec",
+      "title": "Build Agent Task Spec (ATS) — standardized task unit with GitHub sync",
+      "description": "Implement ATS v0.1.0: TASK.md files with YAML frontmatter as the atomic unit of work, JSON schemas for validation, INDEX.json generation, lock files for agent coordination, progress tracking, GitHub Issues/Projects sync via gh CLI, lifecycle hooks for task start/end automation, and a CLI entrypoint. Builds on the earlier init.sh/progress.jsonl pattern and integrates with the 100-agent swarm system.",
+      "package": "_monolith",
+      "status": "completed",
+      "complexity": "XL",
+      "blocked_by": [],
+      "labels": ["feat"],
+      "created_at": "2026-02-07"
     }
   ]
 }

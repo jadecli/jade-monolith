@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://jadecli.dev/schemas/ats/v0.1.0/index.schema.json",
+  "title": "ATS Index",
+  "description": "Validates INDEX.json files that aggregate task summaries and statistics.",
+  "type": "object",
+  "required": ["version", "generatedAt", "stats", "tasks"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the ATS spec."
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of when this index was generated."
+    },
+    "stats": {
+      "type": "object",
+      "required": [
+        "total",
+        "pending",
+        "locked",
+        "in_progress",
+        "blocked",
+        "review",
+        "completed",
+        "rejected"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pending": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "locked": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "in_progress": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blocked": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "review": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "completed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rejected": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "description": "Counts of tasks by status."
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/TaskSummary"
+      },
+      "description": "Array of task summary objects."
+    }
+  },
+  "definitions": {
+    "TaskSummary": {
+      "type": "object",
+      "required": ["id", "type", "subject", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "feat",
+            "fix",
+            "docs",
+            "style",
+            "refactor",
+            "perf",
+            "test",
+            "build",
+            "ci",
+            "chore",
+            "revert"
+          ]
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "locked",
+            "in_progress",
+            "blocked",
+            "review",
+            "completed",
+            "rejected"
+          ]
+        },
+        "owner": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "breaking": {
+          "type": "boolean"
+        },
+        "blockedBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "blocks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "assignableTo": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

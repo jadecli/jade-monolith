@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://jadecli.dev/schemas/ats/v0.1.0/progress.schema.json",
+  "title": "ATS Progress",
+  "description": "Validates progress tracking files in the Agent Task Spec (ATS) v0.1.0 system.",
+  "type": "object",
+  "required": ["lastUpdated"],
+  "additionalProperties": false,
+  "properties": {
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of the last progress update."
+    },
+    "currentFocus": {
+      "type": "string",
+      "description": "Task ID of the current focus."
+    },
+    "recentlyCompleted": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Task IDs recently completed."
+    },
+    "blocked": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["taskId"],
+        "additionalProperties": false,
+        "properties": {
+          "taskId": {
+            "type": "string",
+            "description": "ID of the blocked task."
+          },
+          "blockedBy": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Task IDs causing the block."
+          },
+          "since": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp of when the block started."
+          }
+        }
+      },
+      "description": "Tasks currently blocked."
+    },
+    "nextUp": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Task IDs queued to work on next."
+    },
+    "sessionNotes": {
+      "type": "string",
+      "description": "Free-form notes about the current session."
+    }
+  }
+}
