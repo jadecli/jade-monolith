@@ -54,3 +54,99 @@
 	path = packages/jadeflow-dev-scaffold
 	url = https://github.com/jadecli/jadeflow-dev-scaffold.git
 	branch = pre-main
+[submodule "packages-triage/ai2plans-gui"]
+	path = packages-triage/ai2plans-gui
+	url = https://github.com/jadecli/ai2plans-gui.git
+	branch = main
+[submodule "packages-triage/wsl2-dotfiles-for-claude"]
+	path = packages-triage/wsl2-dotfiles-for-claude
+	url = https://github.com/jadecli/wsl2-dotfiles-for-claude.git
+	branch = main
+[submodule "packages-triage/CLAUDE_CUSTOM_INSTRUCTIONS_PROJECTS"]
+	path = packages-triage/CLAUDE_CUSTOM_INSTRUCTIONS_PROJECTS
+	url = https://github.com/jadecli/CLAUDE_CUSTOM_INSTRUCTIONS_PROJECTS.git
+	branch = main
+[submodule "packages-triage/gordon-workspace"]
+	path = packages-triage/gordon-workspace
+	url = https://github.com/jadecli/gordon-workspace.git
+	branch = main
+[submodule "packages-triage/private_forks"]
+	path = packages-triage/private_forks
+	url = https://github.com/jadecli/private_forks.git
+	branch = main
+[submodule "packages-triage/public-repo-to-private-fork"]
+	path = packages-triage/public-repo-to-private-fork
+	url = https://github.com/jadecli/public-repo-to-private-fork.git
+	branch = main
+[submodule "packages-triage/jade-dotfiles"]
+	path = packages-triage/jade-dotfiles
+	url = https://github.com/jadecli/jade-dotfiles.git
+	branch = main
+[submodule "packages-triage/agent-skills"]
+	path = packages-triage/agent-skills
+	url = https://github.com/jadecli/agent-skills.git
+	branch = main
+[submodule "packages-triage/agent-skills-1"]
+	path = packages-triage/agent-skills-1
+	url = https://github.com/jadecli/agent-skills-1.git
+	branch = main
+[submodule "packages-triage/claude-code-plugins"]
+	path = packages-triage/claude-code-plugins
+	url = https://github.com/jadecli/claude-code-plugins.git
+	branch = main
+[submodule "packages-triage/claude-plugins"]
+	path = packages-triage/claude-plugins
+	url = https://github.com/jadecli/claude-plugins.git
+	branch = main
+[submodule "packages-triage/claude-plugins-1"]
+	path = packages-triage/claude-plugins-1
+	url = https://github.com/jadecli/claude-plugins-1.git
+	branch = main
+[submodule "packages-triage/macos-claude-assist"]
+	path = packages-triage/macos-claude-assist
+	url = https://github.com/jadecli/macos-claude-assist.git
+	branch = main
+[submodule "packages-triage/parallel-ai-mcp"]
+	path = packages-triage/parallel-ai-mcp
+	url = https://github.com/jadecli/parallel-ai-mcp.git
+	branch = main
+[submodule "packages-triage/jade-swarm-superpowers"]
+	path = packages-triage/jade-swarm-superpowers
+	url = https://github.com/jadecli/jade-swarm-superpowers.git
+	branch = main
+[submodule "packages-triage/claude-cli-assist"]
+	path = packages-triage/claude-cli-assist
+	url = https://github.com/jadecli/claude-cli-assist.git
+	branch = main
+[submodule "packages-triage/jade-dotfiles-dev"]
+	path = packages-triage/jade-dotfiles-dev
+	url = https://github.com/jadecli/jade-dotfiles-dev.git
+	branch = main
+[submodule "packages-triage/jadecli-claudellama-docker"]
+	path = packages-triage/jadecli-claudellama-docker
+	url = https://github.com/jadecli/jadecli-claudellama-docker.git
+	branch = master
+[submodule "packages-triage/jadecli-docker-claude-experimentation"]
+	path = packages-triage/jadecli-docker-claude-experimentation
+	url = https://github.com/jadecli/jadecli-docker-claude-experimentation.git
+	branch = main
+[submodule "packages-triage/jadecli_platform_claude"]
+	path = packages-triage/jadecli_platform_claude
+	url = https://github.com/jadecli/jadecli_platform_claude.git
+	branch = main
+[submodule "packages-triage/mac-audit"]
+	path = packages-triage/mac-audit
+	url = https://github.com/jadecli/mac-audit.git
+	branch = staging
+[submodule "packages-triage/26-04-wslg-build-template"]
+	path = packages-triage/26-04-wslg-build-template
+	url = https://github.com/jadecli/26-04-wslg-build-template.git
+	branch = main
+[submodule "packages-triage/jadecli"]
+	path = packages-triage/jadecli
+	url = https://github.com/jadecli/jadecli.git
+	branch = main
+[submodule "packages-triage/jadecli-marketplace"]
+	path = packages-triage/jadecli-marketplace
+	url = https://github.com/jadecli/jadecli-marketplace.git
+	branch = main
