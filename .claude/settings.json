@@ -16,7 +16,10 @@
       "Bash(node *)",
       "Bash(gh *)",
       "Bash(pytest *)",
-      "Bash(npx vitest *)"
+      "Bash(npx vitest *)",
+      "Bash(./scripts/swarm-status.sh *)",
+      "Bash(./scripts/swarm-launch.sh *)",
+      "Bash(bash .claude/hooks/*)"
     ],
     "deny": [
       "Read(**/.env*)",
@@ -25,6 +28,42 @@
       "Read(**/secrets/**)",
       "Write(**/secrets/**)",
       "Edit(**/secrets/**)"
+    ]
+  },
+  "hooks": {
+    "TaskCompleted": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/swarm-quality-gate.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "TeammateIdle": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/swarm-teammate-idle.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/swarm-file-guard.sh",
+            "timeout": 10
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
