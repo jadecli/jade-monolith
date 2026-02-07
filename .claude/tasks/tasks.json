@@ -109,6 +109,17 @@
       "blocked_by": [],
       "labels": ["feat"],
       "created_at": "2026-02-07"
+    },
+    {
+      "id": "monolith/setup-code-team-agents",
+      "title": "Set up Claude Code team agents, skills, and hooks",
+      "description": "Phase 1: Update agent definitions to match Claude Code sub-agent spec (frontmatter fields: permissionMode, memory, maxTurns, skills, hooks). Add team-lead coordinator agent. Phase 2: Create proper SKILL.md skills (quality-gate, task-workflow, review-pr, package-ops). Convert agent-teams to SKILL.md format. Phase 3: Add lifecycle hooks to settings.json (PostToolUse, TaskCompleted, TeammateIdle, Stop). Create hook scripts for quality enforcement.",
+      "package": "_monolith",
+      "status": "completed",
+      "complexity": "L",
+      "blocked_by": [],
+      "labels": ["feat"],
+      "created_at": "2026-02-07"
     }
   ]
 }

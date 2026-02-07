@@ -16,7 +16,8 @@
       "Bash(node *)",
       "Bash(gh *)",
       "Bash(pytest *)",
-      "Bash(npx vitest *)"
+      "Bash(npx vitest *)",
+      "Bash(npx eslint *)"
     ],
     "deny": [
       "Read(**/.env*)",
@@ -25,6 +26,54 @@
       "Read(**/secrets/**)",
       "Write(**/secrets/**)",
       "Edit(**/secrets/**)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post-edit-lint.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/task-completed-gate.sh",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "TeammateIdle": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/teammate-idle-gate.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "implementer|test-writer",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/task-completed-gate.sh",
+            "timeout": 60
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
