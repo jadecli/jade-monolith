@@ -1,4 +1,32 @@
 {
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_ENABLE_TASKS": "true"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(docker *)",
+      "Bash(docker compose *)",
+      "Bash(uv *)",
+      "Bash(ruff *)",
+      "Bash(ty *)",
+      "Bash(mise *)",
+      "Bash(npm *)",
+      "Bash(node *)",
+      "Bash(gh *)",
+      "Bash(pytest *)",
+      "Bash(npx vitest *)"
+    ],
+    "deny": [
+      "Read(**/.env*)",
+      "Write(**/.env*)",
+      "Edit(**/.env*)",
+      "Read(**/secrets/**)",
+      "Write(**/secrets/**)",
+      "Edit(**/secrets/**)"
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "bash ~/projects/jade-monolith/scripts/statusline.sh"
